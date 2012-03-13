@@ -12,7 +12,7 @@ $("#alias").keypress(function(event) {
     if (event.which == 13) {
         $("#btn").click();
     }
-})
+});
 
 $("#btn").click(function(event) {
     event.preventDefault();
