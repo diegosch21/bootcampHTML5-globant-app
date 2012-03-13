@@ -18,7 +18,7 @@ $("#btn").click(function(event) {
     event.preventDefault();
     var param = $("#alias").val();
         
-    $.post('api/disptcher.php',
+    $.post('api/dispatcher.php',
         {service: 'welcome.hello', params: {"name": ""+param+""}},
         function(res) {
             $("#result").html(res);
