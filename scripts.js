@@ -18,7 +18,7 @@ $("#btn").click(function(event) {
     event.preventDefault();
     var param = $("#alias").val();
         
-    $.post('api/dispatcher.php',
+    $.post('api/disptcher.php',
         {service: 'welcome.hello', params: {"name": ""+param+""}},
         function(res) {
             $("#result").html(res);
@@ -28,6 +28,12 @@ $("#btn").click(function(event) {
         
     $("#alias").val('');
     $("#alias").focus();
+    
+    $("#result").ajaxError(function(event, request, settings){
+        $(this).append("Error en " + settings.url + ": "+ request.responseText);
+        $(this).addClass('error');
+        $(this).removeClass('resultado');
+    });
 
 
 });
