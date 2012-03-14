@@ -19,8 +19,10 @@ $("#btn").click(function(event) {
    
     var param = $("#alias").val();
     var resul = $("#result");
+    var alia = $("#alias");
+    url = 'api/dispatcher.php';
         
-    $.post('api/dispatcher.php',
+    $.post(url,
         {service: 'welcome.hello', params: {"name": ""+param+""}},
         function(res) {
             resul.html(res);
@@ -28,8 +30,8 @@ $("#btn").click(function(event) {
             resul.removeClass('error');
         });
         
-    $("#alias").val('');
-    $("#alias").focus();
+    alia.val('');
+    alia.focus();
     
     resul.ajaxError(function(event, request, settings){
         $(this).html("Error en " + settings.url + ": "+ request.responseText);
