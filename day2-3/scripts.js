@@ -6,6 +6,7 @@
 $(document).ready(function() {
    alert("Sitio cargado");
    $("#alias").focus();
+
 });
 
 $("#alias").keypress(function(event) {
