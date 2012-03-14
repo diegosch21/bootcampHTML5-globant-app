@@ -16,22 +16,22 @@ $("#alias").keypress(function(event) {
 });
 
 $("#btn").click(function(event) {
-    event.preventDefault();
+   
     var param = $("#alias").val();
-    
+    var resul = $("#result");
         
     $.post('api/dispatcher.php',
         {service: 'welcome.hello', params: {"name": ""+param+""}},
         function(res) {
-            $("#result").html(res);
-            $("#result").addClass('resultado');
-            $("#result").removeClass('error');
+            resul.html(res);
+            resul.addClass('resultado');
+            resul.removeClass('error');
         });
         
     $("#alias").val('');
     $("#alias").focus();
     
-    $("#result").ajaxError(function(event, request, settings){
+    resul.ajaxError(function(event, request, settings){
         $(this).html("Error en " + settings.url + ": "+ request.responseText);
         $(this).addClass('error');
         $(this).removeClass('resultado');
