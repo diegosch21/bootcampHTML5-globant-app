@@ -1,0 +1,28 @@
+/* 
+    Document   : styles
+    Created on : 13/03/2012, 00:31:30
+    Author     : diego
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+body {
+    text-align:center;
+   
+}
+
+div {
+     padding-bottom: 6px;
+}
+
+.resultado {
+    color: green;
+    padding-top: 24px;
+}
+
+.error {
+    color: red;
+    padding-top: 24px;
+}
