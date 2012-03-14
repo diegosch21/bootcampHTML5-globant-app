@@ -30,7 +30,7 @@ $("#btn").click(function(event) {
     $("#alias").focus();
     
     $("#result").ajaxError(function(event, request, settings){
-        $(this).append("Error en " + settings.url + ": "+ request.responseText);
+        $(this).html("Error en " + settings.url + ": "+ request.responseText);
         $(this).addClass('error');
         $(this).removeClass('resultado');
     });
