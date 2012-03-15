@@ -1,10 +1,7 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 $(document).ready(function() {
-   alert("Sitio cargado");
+  // alert("Sitio cargado");
    $("#alias").focus();
 
 });
@@ -50,3 +47,10 @@ $("#btn").click(function() {
     });
 
 });
+
+$("#sample").click(function() {
+    
+    $.mobile.loadPage( "pages/sample1.php", {
+	pageContainer: $("#result")
+	});
+})
