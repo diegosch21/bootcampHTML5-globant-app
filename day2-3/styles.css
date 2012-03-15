@@ -20,9 +20,11 @@ div {
 .resultado {
     color: green;
     padding-top: 24px;
+     padding-bottom: 24px;
 }
 
 .error {
     color: red;
     padding-top: 24px;
+     padding-bottom: 24px;
 }

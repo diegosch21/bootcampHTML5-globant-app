@@ -12,11 +12,21 @@ $(document).ready(function() {
 $("#alias").keypress(function(event) {
     if (event.which == 13) {
         $("#btn").click();
+ 
     }
 });
 
-$("#btn").click(function(event) {
+$(document).keyup(function(event) {
+    if (event.which ==27) {
+        $.mobile.hidePageLoadingMsg();
+        $("#alias").val('');
+        
+    }
+});
+
+$("#btn").click(function() {
    
+    $.mobile.showPageLoadingMsg();
     var param = $("#alias").val();
     var resul = $("#result");
     var alia = $("#alias");
@@ -38,6 +48,5 @@ $("#btn").click(function(event) {
         $(this).addClass('error');
         $(this).removeClass('resultado');
     });
-
 
 });

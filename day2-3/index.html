@@ -2,15 +2,18 @@
 <html>
     <head>
         <title>Days 2&3: jQuery Mobile</title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" > 
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
     </head>
+  
     <body>
-        <div data-role="page"> 
-            <div data-role="header">Identificación...</div> 
+        <div data-role="page" id="home"> 
+            <div data-role="header">
+                <h2>Identificación...</h2>
+            </div><!-- /header --> 
+            
             <div data-role="content">
                 <div data-role="fieldcontain">
                     <label for="alias">Alias:</label>
@@ -19,14 +22,147 @@
                 <div>
                     <input id="btn" type="button" data-inline="true" value="Send"/>
                 </div>
-                <div id="result"></div>
+                
+                <div id="result" class="resultado"></div>
+                
+                <div data-role="controlgroup" data-type="horizontal" >
+                    <a href="#page1" data-role="button" data-theme ="b" data-transition="pop">Page 1</a>
+                    <a href="#page2" data-role="button" data-theme ="b" data-transition="flow">Page 2</a>
+                    <a href="#page3" data-role="button" data-theme ="b" data-transition="slideup">Page 3</a>
+                </div>
+            </div>
+            
+            <div data-role="footer" data-id="pie" data-position="fixed">© 2012 Diego Schwindt</div> 
+        </div> <!-- /home -->      
+        
+        <div data-role="page" id="page1"> 
+            <div data-role="header" data-id="menu" data-position="fixed" data-theme="b">
+                <div data-role="navbar">
+		<ul>
+			<li><a href="#page1" class="ui-btn-active ui-state-persist">Page 1</a></li>
+			<li><a href="#page2" data-transition="slide">Page 2</a></li>
+			<li><a href="#page3" data-transition="none">Page 3</a></li>
+		</ul>
+                </div><!-- /navbar -->
+            </div><!-- /header --> 
+            
+            <div data-role="content">
+                <h2>¿La querés con mayonesa o ketchup?</h2>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><a href="#dialog1" data-role="button" data-rel="dialog" data-transition="pop" data-theme="e">Mayonesa</a></div>
+                    <div class="ui-block-b"><a href="#dialog2" data-role="button" data-rel="dialog" data-transition="turn" data-theme="c">Salsa golf!</a></div>	 
+                    <div class="ui-block-b"><a href="#dialog3" data-role="button" data-rel="dialog" data-transition="slide" data-theme="a">No sé, dudo...</a></div>  
+                </div><!-- /grid-b -->
+                <div>
+                    <a href="#home" data-role="button" data-inline="true" data-icon="back" data-theme="b" data-direction="reverse">Back</a>
+                </div>
+            </div>
+            
+            <div data-role="footer" data-id="pie" data-position="fixed">© 2012 Diego Schwindt</div> 
+        </div> <!-- /page1 -->
+            
+        
+        <div data-role="page" id="page2"> 
+             <div data-role="header" data-id="menu" data-position="fixed" data-theme="b">
+                <div data-role="navbar" >
+		<ul>
+			<li><a href="#page1" data-transition="turn" >Page 1</a></li>
+			<li><a href="#page2" class="ui-btn-active ui-state-persist">Page 2</a></li>
+			<li><a href="#page3" data-transition="flip">Page 3</a></li>
+		</ul>
+                </div><!-- /navbar -->
+            </div><!-- /header -->  
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="slider">Porcentaje de Fernet:</label>
+                        <input type="range" name="slider" id="slider" value="25" min="10" max="80" data-theme="a" data-track-theme="b" />
+                </div>
+                <div>
+                    <a href="#home" data-role="button" data-inline="true" data-icon="back" data-theme="b" data-direction="reverse">Back</a>
+                </div>
             </div> 
-            <div data-role="footer">© 2012 Diego Schwindt</div> 
-        </div> 
+            <div data-role="footer" data-id="pie" data-position="fixed">© 2012 Diego Schwindt</div> 
+        </div> <!-- /page 2-->
+        
+        <div data-role="page" id="page3"> 
+             <div data-role="header" data-id="menu" data-position="fixed" data-theme="b">
+                <div data-role="navbar">
+		<ul>
+			<li><a href="#page1" data-role="button" data-transition="slidedown">Page 1</a></li>
+			<li><a href="#page2" data-role="button" data-transition="fade">Page 2</a></li>
+			<li><a href="#page3" data-role="button" class="ui-btn-active ui-state-persist">Page 3</a></li>
+		</ul>
+                </div><!-- /navbar -->
+            </div><!-- /header --> 
+            <div data-role="content">
+                <div data-role="collapsible-set" data-content-theme="c">
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+			<h3>Section 1</h3>
+                        <p>lalal</p>
+                    </div>
+                    <div data-role="collapsible" data-theme="a" data-content-theme="a">
+			<h3>Section 2</h3>
+			<p>lelel</p>
+                    </div>
+                    <div data-role="collapsible" data-theme="e" data-content-theme="d">
+			<h3>Section3</h3>
+			<p>lololo</p>
+                    </div>
+		</div>
+
+                <div><a href="#home" data-role="button" data-inline="true" data-icon="back" data-theme="b" data-direction="reverse">Back</a></div>
+
+            
+            </div> <!-- /content --> 
+        
+            <div data-role="footer" data-id="pie" data-position="fixed">© 2012 Diego Schwindt</div> 
+        </div> <!-- /page 3-->
+
+         <div data-role="page" id="dialog1"> 
+             <div data-role="header" data-theme="e">
+                 <h1>Dialog</h1>
+             </div>
+             <div data-role="content" data-theme="d">
+                 <p>Con $10000 seremos millonarios!</p>
+                 <p>Podremos comprar todo tipo de cosas útiles, como… <b>¡Amor!</b> </p>
+                 <div>
+                    <a href="#page1" data-role="button" data-inline="true" data-icon="star" data-theme="e" data-direction="reverse" >D'oh!</a>
+                </div>
+                 
+             </div>
+         </div>
+        
+         <div data-role="page" id="dialog2"> 
+             <div data-role="header" data-theme="d">
+                 <h1>Dialog</h1>
+             </div>
+             <div data-role="content" data-theme="c">
+                 <p>Hable más fuerte que tengo una toalla!</p>
+                 <div>
+                    <a href="#page1" data-role="button" data-inline="true" data-icon="alert" data-theme="e" data-direction="reverse" >D'oh!</a>
+                </div>
+                 
+             </div>
+         </div>
+        
+        <div data-role="page" id="dialog3"> 
+             <div data-role="header" data-theme="a">
+                 <h1>Dialog</h1>
+             </div>
+             <div data-role="content" data-theme="a">
+                 <p>Bueno cerebro... yo no te agrado y tu no me agradas, pero vamos a hacer esto juntos y luego seguire matándote con cerveza... </p>
+                 <div>
+                    <a href="#page1" data-role="button" data-inline="true" data-icon="grid" data-theme="e" data-direction="reverse" >D'oh!</a>
+                </div>
+                 
+             </div>
+         </div>
+        
+       
         
         
-     
-        
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
         <script src="scripts.js"></script>
     </body>
     
