@@ -48,9 +48,3 @@ $("#btn").click(function() {
 
 });
 
-$("#sample").click(function() {
-    
-    $.mobile.loadPage( "pages/sample1.php", {
-	pageContainer: $("#result")
-	});
-})
