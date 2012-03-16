@@ -10,6 +10,7 @@
 
 body {
     text-align:center;
+    
    
 }
 
@@ -25,4 +26,10 @@ div {
 .error {
     color: red;
     padding-top: 24px;
+}
+
+.peli {
+    
+    padding-bottom: 18px;
+    background-color: transparent;
 }
