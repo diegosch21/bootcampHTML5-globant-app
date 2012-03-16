@@ -1,3 +1,4 @@
+var obj;
 
 
 $(document).ready(function() {
@@ -48,3 +49,41 @@ $("#btn").click(function() {
 
 });
 
+    $("body").delegate(".load","click",function() {
+        $.mobile.showPageLoadingMsg();
+        url = 'api/dispatcher.php';
+        $.ajax( url, {
+            type: 'POST', 
+            
+            data: {service: 'movie.getTop', params: {'name': 'null'}},
+            dataType: 'json' , 
+            success: function(res) {
+               
+                obj = res;
+                var html = "";
+                var i = 0;
+
+                while (obj[i]!= null) {
+                    html += "<li><a href='#dialogPeli' data-identity='"+i+"' data-rel='dialog'><img src='"+obj[i].BoxArt.SmallUrl+"' />";
+                    html += "<h3>"+obj[i].Name+"</h3>";
+                    html += "<p>"+obj[i].ShortSynopsis+"</p></a></li>";
+                    ++i;
+                } 
+                $("#pelis").html(html);
+                $("#pelis").listview('refresh');
+                
+                
+        
+            }
+
+        });
+        $.mobile.hidePageLoadingMsg();
+    });
+
+    $("#lista").delegate("li","click", function() {
+        var i = $(this).index();
+        var html = "<h2>"+obj[i].Name+"</h2>";
+        html += "<div style='float:left; padding-right: 6px'> <img src='"+obj[i].BoxArt.LargeUrl+"' /></div>";
+        html += "<p class='info'><i>Year:</i> "+obj[i].ReleaseYear+"</p><p class='info'><i>Synopsis:</i> "+obj[i].Synopsis+"</p>";
+        $("#infoPeli").html(html);
+    });
