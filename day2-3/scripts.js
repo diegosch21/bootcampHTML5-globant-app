@@ -49,7 +49,7 @@ $("#btn").click(function() {
 
 });
 
-    $("body").delegate(".load","click",function() {
+    $("body").on("click",".load",function() {
         $.mobile.showPageLoadingMsg();
         url = 'api/dispatcher.php';
         $.ajax( url, {
@@ -64,26 +64,23 @@ $("#btn").click(function() {
                 var i = 0;
 
                 while (obj[i]!= null) {
-                    html += "<li><a href='#dialogPeli' data-identity='"+i+"' data-rel='dialog'><img src='"+obj[i].BoxArt.SmallUrl+"' />";
+                    html += "<li><a href='#dialogPeli' data-identity='"+i+"' data-rel='dialog'><img src='"+obj[i].BoxArt.SmallUrl+"'/>";
                     html += "<h3>"+obj[i].Name+"</h3>";
                     html += "<p>"+obj[i].ShortSynopsis+"</p></a></li>";
                     ++i;
                 } 
-                $("#pelis").html(html);
-                $("#pelis").listview('refresh');
-                
-                
-        
+                var pelis = $("#pelis");
+                pelis.html(html)
+                    .listview('refresh');
+                $.mobile.hidePageLoadingMsg();
             }
-
         });
-        $.mobile.hidePageLoadingMsg();
     });
 
-    $("#lista").delegate("li","click", function() {
+    $("#lista").on("click","li", function() {
         var i = $(this).index();
         var html = "<h2>"+obj[i].Name+"</h2>";
-        html += "<div style='float:left; padding-right: 6px'> <img src='"+obj[i].BoxArt.LargeUrl+"' /></div>";
+        html += "<div style='float:left; padding-right: 6px'> <img src='"+obj[i].BoxArt.LargeUrl+"'  width='110px' height='150px'/></div>";
         html += "<p class='info'><i>Year:</i> "+obj[i].ReleaseYear+"</p><p class='info'><i>Synopsis:</i> "+obj[i].Synopsis+"</p>";
         $("#infoPeli").html(html);
     });
