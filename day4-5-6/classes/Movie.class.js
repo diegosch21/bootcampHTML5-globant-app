@@ -25,11 +25,11 @@ function Movie(title,rating,id) {
 // Public methods
 Movie.prototype.play = function(){ 
     //console.log('Playing '+this.getTitle()+'...');
-    $.publish("movies",['playing',this.getTitle()]);
+    $.publish("movies",['play',this.getTitle()]);
 }
 Movie.prototype.stop = function() {
     //console.log(this.getTitle()+' stopped.')
-    $.publish("movies",['stopped',this.getTitle()]); 
+    $.publish("movies",['stop',this.getTitle()]); 
 }
 
 augment(Movie, SocialMixin);

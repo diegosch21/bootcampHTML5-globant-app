@@ -1,9 +1,9 @@
 function MovieObserver () {
 
     this.handleSub = function(e,event,title) {
-        if (event == 'playing')
+        if (event == 'play')
             console.log('Playing '+title+'...');
-        else if (event == 'stopped')
+        else if (event == 'stop')
             console.log(title+' stopped.');
         
     }
