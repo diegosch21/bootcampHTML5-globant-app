@@ -1,15 +1,12 @@
 function MovieObserver () {
-
     this.handleSub = function(event,title) {
         if (event == 'play')
             console.log('Playing '+title+'...');
         else if (event == 'stop')
             console.log(title+' stopped.');
-        
     }
     $.subscribe("movies",this.handleSub);
 }
-
 
 
 (function(q) {
@@ -34,7 +31,6 @@ function MovieObserver () {
         return token;
     };
     
-    
     q.unsubscribe = function (token) {
         for ( var topic in topics ) {
             if ( topics[topic] ) {
@@ -45,7 +41,6 @@ function MovieObserver () {
                        return token;
                    }
                 });
-               
             }
         }
         return false;

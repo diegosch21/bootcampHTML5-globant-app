@@ -22,7 +22,6 @@ var Movie = (function (title,rating,id) {
         this.setCast= function(cast) { actors = cast;   }
         this.getCast= function() { return actors; }
     }
-    
 })();
 
 // Public methods

@@ -6,9 +6,6 @@ function Actor(name) {
     
     this.getName= function() {return myName;}
     this.getBiography= function() {return myBiography;}
-    
- 
 }
-
 Actor.prototype.toString= function() { return this.getName(); }
 
