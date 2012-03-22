@@ -1,4 +1,13 @@
-require(["modules/Movie","modules/Director","jquery","jquery.mobile"],
+require.config({
+    paths: {
+        jQuery: 'lib/jquery',
+        jQueryMobile: 'lib/jquery.mobile'
+    }
+});
+
+
+
+require(["modules/Movie","modules/Director","jQuery","jQueryMobile"],
     function(Movie,Director) {
 
         var log = '<p>';
@@ -18,7 +27,7 @@ require(["modules/Movie","modules/Director","jquery","jquery.mobile"],
         simpsons.setDirector(director); 
         log+= "Director of "+simpsons.getTitle()+": "+simpsons.getDirector()+"</p>";
         $("#log").html(log);
-
+        
         $(".speak").click(function(){
             simpsons.getDirector().speak();
         })

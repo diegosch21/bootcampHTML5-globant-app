@@ -2,13 +2,13 @@ define(function() {
     function Director (name) {
         //Private variables
         var myName= name? name : '';
-        var quotes = [];
+        var myQuotes = [];
         
         //Privileged methods (setters and getters)
         this.getName= function() {return myName;}
         this.setName= function(name) {myName = name;}
-        this.setQuotes= function(quotes) {actors = quotes;}
-        this.getQuotes= function() {return actors;}
+        this.setQuotes= function(quotes) {myQuotes = quotes;}
+        this.getQuotes= function() {return myQuotes;}
     }
     // Public methods
     Director.prototype.speak = function() {
