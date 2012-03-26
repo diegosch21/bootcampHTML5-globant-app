@@ -7,17 +7,17 @@ define({
         '<ul class="lista">{{#work_experience}}<li> <u>{{company}}</u><br/> {{position}} <i>[{{period}}]</i></li>{{/work_experience}}</ul></p>'
         +'{{/profiles}}',
     
-    underscore: '<% for(var i=0; i<view.profiles.length;i++){ %>'+
-        '<% var profile = view.profiles[i]; %>'+
-        '<h3><%= profile.name></h3><h4><i><%= profile.actual_job></i></h4>'+
-        '<p class="profile"><b>Age:</b> <%= profile.age><br/><b>City:</b> <%= profile.city><br/>'+
-        '<b>Education:</b> <%= profile.education><br/>'+
+    underscore: '<% for(var i=0; i<profiles.length;i++){ %>'+
+        '<% var profile = profiles[i]; %>'+
+        '<h3><%= profile.name%></h3><h4><i><%= profile.actual_job%></i></h4>'+
+        '<p class="profile"><b>Age:</b> <%= profile.age%><br/><b>City:</b> <%= profile.city%><br/>'+
+        '<b>Education:</b> <%= profile.education%><br/>'+
         '<b>Work experience:</b>'+
         '<ul class="lista"><% for(var j=0; j<profile.work_experience.length;j++){ %>'+
         '<% var work = profile.work_experience[j]; %>'+
-        '<li> <u><%= work.company></u><br/><%= work.position> <i>[<%= work.period>]</i></li>'+
-        '<% }></ul></p>'+ 
-        '<% }>',
+        '<li> <u><%= work.company%></u><br/><%= work.position%> <i>[<%= work.period%>]</i></li>'+
+        '<% }%></ul></p>'+ 
+        '<% }%>',
         
     
     jSmart: '{foreach $profiles as $i => $profile}'+

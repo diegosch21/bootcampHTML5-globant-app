@@ -15,7 +15,7 @@ require(["parser","jQuery","jQueryMobile"],
     function(parser) { 
        $.getJSON('profiles/profs.json',function(json) {
             $("#mustache").html(parser.parseMustache(json));
-     //       $("#underscore").html(parser.parseUnderscore(json));
+            $("#underscore").html(parser.parseUnderscore(json));
             $("#jsmart").html(parser.parseJSmart(json));
         })
        
