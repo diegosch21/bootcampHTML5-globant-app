@@ -29,7 +29,9 @@ require(["modules/Movie","modules/Director","jQuery","jQueryMobile"],
         $("#log").html(log);
         
         $(".speak").click(function(){
-            simpsons.getDirector().speak();
+            var quote = simpsons.getDirector().speak();
+            $("#who").html(quote[0]);
+            $("#quote").html(quote[1]);
         })
     }
 );

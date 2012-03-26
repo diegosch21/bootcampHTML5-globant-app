@@ -16,8 +16,7 @@ define(function() {
         var who = this.getName() + " says: ";
         var quote = q[Math.floor(Math.random() * q.length)];
         console.log(who+quote);
-        $("#who").html(who);
-        $("#quote").html(quote);
+        return [who,quote];
     }
     Director.prototype.toString = function() {
         return this.getName();
