@@ -1,0 +1,40 @@
+{
+    "profiles": [
+        {
+            "name": "Frank Grimes",
+            "actual_job": "Technical Supervisor at Springfield Nuclear Power Plant (sector 7-G)",
+            "city": "Springfield, ?, USA",
+            "age": "35",
+            "education": "Correspondence College: Nuclear physicist",
+            "work_experience": [ {
+                    "company":"Springfield Nuclear Power Plant (sector 7-G)",
+                    "position":"Technical Supervisor",
+                    "period": "1997"
+                },
+                {
+                    "company":"Messenger company",
+                    "position":"Delivery of toys",
+                    "period": "1973-1977"
+                }
+            ]
+        },
+        {
+            "name": "Karl Carlson",
+            "actual_job": "Homer's Supervisor at Springfield Nuclear Power Plant (sector 7-G)",
+            "city": "Springfield, ?, USA",
+            "age": "38",
+            "education": "Correspondence College: Nuclear physicist",
+            "work_experience": [ {
+                    "company":"Springfield Nuclear Power Plant (sector 7-G)",
+                    "position":"Homer's supervisor",
+                    "period": "1996-actuality"
+                },
+                {
+                    "company":"Springfield Nuclear Power Plant (sector 7-G)",
+                    "position":"Security inspector",
+                    "period": "1989-1996"
+                }
+            ]
+        }
+    ]
+ }

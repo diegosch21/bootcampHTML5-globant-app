@@ -1,0 +1,21 @@
+/* 
+    Document   : styles
+    Created on : 25/03/2012, 23:30:36
+    Author     : Diego
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.sangria { 
+    margin-left: 12px;
+}
+
+.profile { 
+    margin-left: 24px;
+    
+}
+
+.lista{
+    margin-left: 36px;
+    padding-bottom: 18px;
+}
