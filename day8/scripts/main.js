@@ -5,14 +5,15 @@ require.config({
         mustache: 'lib/mustache',
         underscore: 'lib/underscore',
         jSmart: 'lib/smart-2.7.min',
+        domReady: 'lib/domReady', 
         parser: 'modules/parser',
         templates: 'modules/templates'
     }
 });
 
 
-require(["parser","jQuery","jQueryMobile"],
-    function(parser) { 
+require(["domReady!","parser","jQuery","jQueryMobile"],
+    function(doc,parser) { 
        $.getJSON('profiles/profs.json',function(json) {
             $("#mustache").html(parser.parseMustache(json));
             $("#underscore").html(parser.parseUnderscore(json));
