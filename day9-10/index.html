@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 9 & 10: MVC & Mixins [Backbone]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="styles/styles.css" />
+        
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        
+    </head>
+    <body>
+
+        <div id="moviesapp">
+            <header>
+                <h1>My Favorites Movies</h1>
+            </header>
+            
+            
+            <section id="main">
+                <ul id="movies-list"></ul>
+            </section>
+            
+            <footer>
+                <h3>Add a movie:</h3>
+                <input id="new-title" class="new" type="text" placeholder="Title"> <input id="new-year" class="new" type="text" placeholder="Year"><br/>
+                <input id="new-genre" class="new" type="text" placeholder="Genre"><br/>
+                <textarea id="new-synopsis" class="new" rows="2" cols="40" placeholder="Synopsis"></textarea>
+                
+            </footer>
+            
+            
+        </div>
+        
+        
+    <!-- Templates -->
+    <script type="text/template" id="item-template">
+        <div class="movie-view">
+            <span class="title"><label><%= title %></label><input class="title-input" type="text" value="<%= title %>"/></span> <span class="year"><label>[<%= year %>]</label><input class="year-input" type="text" value="<%= year %>"/></span> <span class="destroy"></span>
+            <span class="genre"><label><%= genre %></label><input class="genre-input" type="text" value="<%= genre %>"/></span>
+            <div class="synopsis"><p><%= synopsis %></p><textarea class="synopsis-input"  rows="2" cols="40"><%= synopsis %></textarea></div>
+            <br/>
+        </div>
+    
+    </script>
+    
+    </body>
+</html>

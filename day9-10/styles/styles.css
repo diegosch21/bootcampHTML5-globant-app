@@ -1,0 +1,194 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: none repeat scroll 0 0 #848484;
+    color: #FF8000;
+    font: 14px/1.4em "Verdana",Verdana,Arial,sans-serif;
+    margin: 0 auto;
+    width: 520px;
+}
+
+#moviesapp {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+#moviesapp input[type="text"] {
+
+padding: 6px;
+border: 1px solid #999999;
+box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#new-title {
+font-size: 18px;
+width: 350px;
+font-weight: bold;
+}
+
+#new-year {
+font-size: 16px;
+width: 100px;
+font-style: italic;
+}
+
+#new-genre {
+font-size: 16px;
+width: 200px;
+font-style: italic;
+}
+
+
+#new-synopsis {
+font-size: 14px;
+padding: 6px;
+border: 1px solid #999999;
+box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+color: darkgray;
+}
+
+#movies-list {
+    list-style: none outside none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+#movies-list li:last-child {
+    border-bottom: medium none;
+}
+
+#movies-list li {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 24px;
+    padding: 18px 20px 18px 0;
+    position: relative;
+}
+
+#movies-list .destroy {
+    background: url("destroy.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    width: 20px;
+}
+
+#movies-list li:hover .destroy {
+    display: block;
+}
+#movies-list .destroy:hover {
+    background-position: 0 -20px;
+}
+
+#movies-list li .movie-view .title label {
+    display: block;
+    font-size:  18px;
+    color: black;
+    font-weight: bold;
+}
+
+#movies-list li.editing .movie-view .title label {
+    display: none;
+}
+
+#movies-list li .movie-view .title input {
+    display: none;
+}
+
+#movies-list li.editing .movie-view .title input {
+    display: block;
+    width: 350px;
+    font-weight: bold;
+    font-size:  18px;
+    color: black;
+}
+
+#movies-list li .movie-view .year label {
+    display: block;
+    width: 100px;
+    font-style: italic;
+    font-size:  16px;
+    color: black;
+}
+
+#movies-list li.editing .movie-view .year label {
+    display: none;
+}
+
+#movies-list li .movie-view .year input {
+    display: none;
+}
+
+#movies-list li.editing .movie-view .year input {
+    display: block;
+    font-style: italic;
+    font-size:  16px;
+    color: black;
+}
+
+#movies-list li .movie-view .genre label {
+    display: block;
+    width: 200px;
+    font-style: italic;
+    font-size:  16px;
+    color: black;
+}
+
+#movies-list li.editing .movie-view .genre label {
+    display: none;
+}
+
+#movies-list li .movie-view .genre input {
+    display: none;
+}
+
+#movies-list li.editing .movie-view .genre input {
+    display: block;
+    font-style: italic;
+    font-size:  16px;
+    color: black;
+}
+
+#movies-list li .movie-view .synopsis p {
+    display: block;
+    
+    color: darkgray;
+    font-size:  14px;
+    color: darkgray;
+}
+
+#movies-list li.editing .movie-view .synopsis p {
+    display: none;
+}
+
+#movies-list li .movie-view .synopsis textarea {
+    display: none;
+}
+
+#movies-list li.editing .movie-view .synopsis textarea {
+    display: block;
+    
+    font-size:  14px;
+    color: darkgray;
+}
+
+
+#moviesapp footer {
+    background: none repeat scroll 0 0 #F4FCE8;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #EDEDED;
+    color: #81a8ce;
+    display: block;
+    line-height: 37px;
+    margin: 0 -20px -20px;
+    overflow: hidden;
+    padding: 0 20px;
+}
