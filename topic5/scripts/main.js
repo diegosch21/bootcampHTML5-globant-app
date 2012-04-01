@@ -12,7 +12,7 @@ require.config({
 });
 
 
-require(["domReady!","parser","jQuery","jQueryMobile"],
+require(["domReady!","parser","order!jQuery","order!jQueryMobile"],
     function(doc,parser) { 
        $.getJSON('profiles/profs.json',function(json) {
             $("#mustache").html(parser.parseMustache(json));

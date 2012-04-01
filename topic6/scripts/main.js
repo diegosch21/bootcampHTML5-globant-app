@@ -9,7 +9,7 @@ require.config({
 });
 
 
-require(["json2","jQuery","views/AppView"],
+require(["order!json2","order!jQuery","views/AppView"],
     function(json2,jquery,AppView) { 
        $(function() {
             var app = new AppView;

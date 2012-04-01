@@ -7,7 +7,7 @@ require.config({
 
 
 
-require(["modules/Movie","modules/Director","jQuery","jQueryMobile"],
+require(["modules/Movie","modules/Director","order!jQuery","order!jQueryMobile"],
     function(Movie,Director) {
 
         var log = '<p>';
