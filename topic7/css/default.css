@@ -1,0 +1,196 @@
+/* 
+    Document   : default
+    Created on : 01/04/2012
+    Author     : Diego 
+    Description:
+        CSS3 playground
+*/
+
+body {
+    background: lightgray;
+    font: 100% Verdana,Georgia,Helvetica,serif;
+    
+}
+
+.topHeader {
+    text-align: center;
+
+}
+
+
+
+#logo img {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+h1,h2,h3,h4,h5 {
+    text-shadow: 1px 1px 0 rgba(192,192,192, 0.7);
+    -moz-text-shadow: 1px 1px 0 rgba(192,192,192, 0.7);
+    -webkit-text-shadow: 1px 1px 0 rgba(192,192,192, 0.7);
+}
+
+footer {
+    padding-top: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0 rgba(0,0,0, 0.7);
+    -moz-text-shadow: 1px 1px 0 rgba(0,0,0, 0.7);
+    -webkit-text-shadow: 1px 1px 0 rgba(0,0,0, 0.7);
+}
+
+
+nav {
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+    overflow: hidden;
+    padding: 12px 0px 24px 0px;
+
+}
+
+#menu {
+    list-style: none;
+    float: left;
+    /* Centrar... */
+    position: relative; 
+    margin-left: -40px;
+    left:50%
+
+}
+#menu li {
+    position: relative;
+    float:left;  
+    text-align: center;
+    display: inline-block;
+    line-height:56px;
+    border-bottom: 2px groove #2489ce;
+    border-top: 2px groove #2489ce;
+    border-left: 2px groove #2489ce;
+    right: 50%;
+ }
+ 
+#menu li {
+    position: relative;
+    float:left;  
+    text-align: center;
+    display: inline-block;
+    line-height:56px;
+    border-bottom: 2px groove #2489ce;
+    border-top: 2px groove #2489ce;
+    border-left: 2px groove #2489ce;
+    right: 50%;
+}
+
+#menu li:last-child {
+    border-right: 2px groove #2489ce;
+}
+
+#menu li a {
+    font: 24px Helvetica, Arial, sans-serif;
+    color: #2489ce;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 24px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 0 rgba(128,128,128, 0.5);
+    -moz-text-shadow: 1px 1px 0 rgba(128,128,128, 0.5);
+    -webkit-text-shadow: 1px 1px 0 rgba(128,128,128, 0.5);
+}
+
+#menu li:hover {
+    background: #2489ce;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+}
+
+#menu li a:hover {
+    color: #FFFFFF;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+}
+
+/* Exercise 5.d */
+article {
+    float: left;
+    width: 45%;
+    min-width: 400px;
+    display:block;
+    padding: 0 1% 0 1%;
+    margin: 0 1% 0 1%;
+}
+
+
+article header p {
+    font-style: italic;
+}
+
+article p {
+    text-align: justify;
+}
+
+aside {
+    clear: left;
+    padding: 1% 2% 0 2%;
+}
+
+/* Exercise 5.e */
+span.hiOne {
+    background: #ffff00;
+}
+span.hiTwo {
+    background: #00ff99;
+}
+span.hiThree {
+    background: #ffcccc;
+}
+
+/* Exercise 5.f */
+span[class^="hi"] {
+    background: #ff9900;
+} 
+
+/* Exercise 5.g */
+span[class$="One"] {
+    background: #ccccff;
+} 
+
+/* Exercise 5.h (specifity) */
+.mainContent article p span{
+    background: #ff0033;
+}
+
+/* Exercise 5.i */
+article header a:nth-of-type(1) {
+    color: #009999;
+}
+article header a:nth-of-type(2) {
+    color: #cc3300;
+}
+
+/* Exercise 5.j */
+p:empty {
+    display: none;
+}
+
+/* Exercise 5.k */
+article {
+  background: #FFFFFF;
+  -moz-box-shadow: 3px 3px 4px #444;
+  -webkit-box-shadow: 3px 3px 4px #444;
+  box-shadow: 3px 3px 4px #444;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+}
+
+/*  Exercise 5.l */
+aside {
+    transform:rotate(1deg);
+    -moz-transform:rotate(1deg);
+    -webkit-transform:rotate(1deg);
+    -o-transform:rotate(1deg);
+    -ms-transform:rotate(1deg);
+}
+

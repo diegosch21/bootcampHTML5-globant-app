@@ -1,0 +1,179 @@
+body {
+    background: yellow;
+    font: 100% Cambria,Georgia,Helvetica,serif;
+    text-shadow: 0 1px 0 rgba(128, 128, 128, 0.8);
+}
+
+header {
+    text-align: center;
+}
+
+ol, ul {
+    list-style: none outside none;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    padding: 12px 12px 12px 12px;
+    text-align: center;
+    margin:0 auto;
+}
+
+nav li {
+    display: inline;
+    position: relative;
+    line-height: 42px;
+    
+}
+
+
+nav ul a {
+    font: 14px Helvetica, Arial, sans-serif;
+    color: #FF8000;
+    text-decoration: none;
+    padding: 12px 12px 12px 12px;
+    border: 1px solid #FF8000;
+    border-width: 1px 1px 1px 1px;
+}
+
+nav ul a:hover {
+    background: #fbdd52;
+}
+
+
+img {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#monorail #fig {
+    float: right;
+    text-align: center;
+}
+
+#monorail p {
+    text-align: justify;
+}
+
+#monorail h1, #monorail h2, #monorail h3, #monorail h4, #monorail h5 {
+    text-align: center;
+}
+
+
+
+#gal {
+    text-align: center;
+}
+
+#gal .lowresol {
+    text-align: center;
+    color: darkgray;
+    font-style: italic;
+}
+ul.gallery {
+    padding: 6px 6px 6px 6px;
+    overflow: hidden;
+}
+
+/* Figure width adjust automatically */
+ul.gallery li{
+    float: left;
+    width: 50%;
+    height: 100%;
+
+    text-align: center;
+    padding: 0pt;
+    border: 0pt none;
+    outline: 0pt none;
+}
+
+ul.gallery figure {
+    text-align: center;
+    
+}
+
+
+
+#monorail figure a {
+    color: orangered;
+    text-decoration: none;
+}
+
+#monorail .video {
+    text-align: center;
+}
+
+#monorail section {
+    padding-bottom: 18px;
+}
+
+footer {
+    padding-top: 18px;
+}
+
+@media (min-width: 1200px) {
+    .lowresol {
+        display: none;
+    }
+    
+    .columns {
+        -moz-column-count: 4;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 20px;
+	column-count: 4;
+	column-gap: 20px;
+    }
+    #monorail #fig {
+        width: 350px;
+    }
+    ul.gallery figure {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 800px){
+    .columns {
+        -moz-column-count: 3;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 20px;
+	column-count: 3;
+	column-gap: 20px;
+    }
+    #monorail #fig {
+        width: 150px;
+    }
+    
+    ul.gallery figure {
+        max-width: 300px;
+    }
+    
+    .lowresol {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .columns {
+        -moz-column-count: 1;
+	-webkit-column-count: 1;
+	column-count: 1;
+	
+    }
+    #monorail #fig {
+        display: none;
+    }
+    
+    img {
+        display: none;
+    }
+    .lowresol {
+        display: block;
+    }
+}
