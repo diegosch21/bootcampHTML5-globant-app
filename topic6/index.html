@@ -25,7 +25,6 @@
                 <input id="new-title" class="new" type="text" placeholder="Title"> <input id="new-year" class="new" type="text" placeholder="Year"><br/>
                 <input id="new-genre" class="new" type="text" placeholder="Genre"><br/>
                 <textarea id="new-synopsis" class="new" rows="2" cols="40" placeholder="Synopsis"></textarea>
-                
             </footer>
             
             
@@ -38,6 +37,8 @@
             <span class="title"><label><%= title %></label><input class="title-input" type="text" value="<%= title %>"/></span> <span class="year"><label>[<%= year %>]</label><input class="year-input" type="text" value="<%= year %>"/></span> <span class="destroy"></span>
             <span class="genre"><label><%= genre %></label><input class="genre-input" type="text" value="<%= genre %>"/></span>
             <div class="synopsis"><p><%= synopsis %></p><textarea class="synopsis-input"  rows="2" cols="40"><%= synopsis %></textarea></div>
+            <div id="double_click">[Double-click in a field to edit...] </div>
+            <div id="press_enter">[Press enter to submit the changes]</div>
             <br/>
         </div>
     

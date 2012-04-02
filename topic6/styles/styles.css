@@ -180,6 +180,29 @@ color: darkgray;
     color: darkgray;
 }
 
+#movies-list li.editing #double_click {
+    display: none
+}
+
+#movies-list li.editing #press_enter {
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    color: #848484;
+}
+
+#movies-list li #press_enter {
+    display: none;
+}
+
+#movies-list li #double_click {
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    color: #848484;
+}
+
+
 
 #moviesapp footer {
     background: none repeat scroll 0 0 #F4FCE8;
@@ -192,3 +215,4 @@ color: darkgray;
     overflow: hidden;
     padding: 0 20px;
 }
+
