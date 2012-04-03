@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+    <head>
+        <title>Topic 8: HTML5 APIs</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script src="js/main.js"></script>
+        
+    </head>
+    <body>
+        <div data-role="page" id="home"> 
+            <header data-role="header">
+                <h1>Practice of HTML5 APIs</h1>
+                
+            </header><!-- /header --> 
+            
+            <div data-role="content">
+                <section id="codetester">
+                    <header><h2>Javascript code tester</h2></header>
+                    <div>
+                        <textarea id="code" class="new" rows="4" cols="30" placeholder="Add your code here..."></textarea>
+                        <span><input type="checkbox" id="localstorage" checked="checked"/>
+                        <label for="localstorage" data-inline="true">Save code in local storage.</label></span>
+                        <span><button id="run" data-icon="gear" data-inline="true">Run script</button></span>
+                    </div>
+                </section>
+
+                <section id="dragdrop">
+                    <header><h2>Drag & drop files</h2></header>
+                    <div id="dropzone">
+                        <p>&lt;&lt;Drop files here&gt;&gt;</p>
+                    </div>
+                    <div id="files">
+                        <h4>Files dropped:</h4>
+                        <ul id="list"></ul>
+                    </div>
+                </section>
+                
+                <section id="geoloc">
+                    <header><h2>Geolocation</h2></header>
+                    <button id="geo" data-icon="search" data-inline="true">Show current position</button>
+                    <div id="map_canvas">
+                        <img src="http://maps.google.com/maps/api/staticmap?center=-38.717,-62.266&size=700x400&zoom=1&sensor=true"/>
+                    </div>
+                </section>
+                
+                
+                <section id="worker">
+                    <header><h2>Web worker</h2></header>
+                    <button id="create_worker" data-icon="star" data-inline="true">Create web worker</button>
+                    <div id="worker_msg"></div>
+                </section>
+                
+                <section id="websocket">
+                    <header><h2>Web socket</h2></header>
+                    <button id="create_socket" data-icon="arrow-r" data-inline="true">Create web socket and connect</button>
+                    <div>
+                        <div id="connect"><input type="text" id="msg_send"  placeholder="Message to send" maxlength="40"/><button id="send" data-icon="arrow-r" data-inline="true">Send</button></div>
+                        <div id="log"></div>
+                    </div>
+                </section>
+                
+            </div>
+            
+            <footer data-role="footer">
+                <div>HTML5 Bootcamp</div>
+                <address>Diego M. Schwindt <a href="mailto:diego.sch21@gmail.com">&lt;diego.sch21@gmail.com&gt;</a></address>
+            </footer> 
+        </div> <!-- /home --> 
+    </body>
+</html>

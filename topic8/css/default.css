@@ -1,0 +1,64 @@
+/* 
+    Document   : default
+    Created on : 02/04/2012
+    Author     : Diego 
+    Description:
+        HTML5 APIs
+*/
+
+
+section {
+    clear: both;
+    padding: 12px;
+}
+
+#code {
+    width:70%;
+    min-width: 400px;
+    height: 100px;
+
+}
+
+#codetester span {
+    float:left;
+    
+}
+#dropzone {
+    text-align: center;
+    border: 2px dashed #666666;
+    background: #ffffff;
+    width:70%;
+    min-width: 400px;
+    height: 100px;
+    
+}
+
+#dropzone p {
+    font-style: italic;
+    vertical-align: middle;
+}
+
+#dropzone.dragover {
+    background: #e6e6e6;
+}
+
+#files {
+    display:none;
+}
+#files.disp {
+    display: block;
+}
+
+#map_canvas {
+    text-align: center;
+    width: 80%;
+    min-width: 500px;
+    height: 400px;
+}
+#connect {
+    display:none;
+}
+
+#connect.connected {
+    display:block;
+}
