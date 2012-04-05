@@ -34,6 +34,7 @@ $(document).ready(function() {
     dropZone.bind('dragover',function(evt) { 
         evt.stopPropagation();
         evt.preventDefault();
+        evt.dataTransfer.dropEffect = 'copy';
         dropZone.addClass('dragover');
     });
     dropZone.bind('dragleave',function(evt) { 
